@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="CMS.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%-- Bootstrap CSS --%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%-- DataTable css --%>
+    <link href="datatable/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%-- fontawesome css. all.css file will have all the necessary css linked --%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <%-- Custom style sheet --%>
+    <link href="CSS/customStylesheet.css" rel="stylesheet" />
+
+    <%-- jquery js --%>
+    <script src="bootstrap/js/jquery.slim.min.js"></script>
+    <%-- popper js --%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%-- bootstrap js --%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <%-- Creating the header navigation bar
+            1) first creating a div
+            2)then the built in nav class--%>
+
+        <div>
+            <%-- Navbar --%>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/money-bag.png" width="30" height="30" />
+                    <%--<img src="imgs/coins_in_cup.jpg" width="50" height="50" />--%>
+                 CMS
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="homepage.aspx">Home </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="About.aspx">About</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <%--<li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server">View Shops</asp:LinkButton>
+                        </li>--%>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server">User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" Visible="false">Log out</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" Visible="false">Hello User</asp:LinkButton>
+                        </li>
+
+
+                    </ul>
+
+
+
+                </div>
+
+
+
+
+
+            </nav>
+        </div>
+        <%-- Main content Placeholder --%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%-- Main content Placeholder --%>
+
+        <!-- Footer -->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server">Admin Login</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton7" runat="server">Shop Management</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server">Location Management</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server">Credit Management</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server">User Management</asp:LinkButton>
+
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <!--removed target="_blank" since it will open a new window -->
+
+                        <p style="color: whitesmoke">&copy All rights reserved.<a class="footerlinks" href="#">&nbsp;KRISHNA ENTERPRISES</a> </p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+        <!-- /Footer -->
+
+    </form>
+</body>
+</html>
